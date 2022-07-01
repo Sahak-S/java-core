@@ -1,0 +1,64 @@
+package primer;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class Excamen {
+
+    public static void main(String[] args) throws IOException {
+
+        int[] array = {21, 0, 12, 54, 65, 0, 5};
+        HashMap<Integer, Integer> counter = new HashMap<>();
+
+        for (Integer x : array) {
+            int value = counter.getOrDefault(x, 0) + 1;
+            counter.put(x, value);
+        }
+
+        System.out.println(counter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        System.out.println();
+
+
+        String ch;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Enter the Statement:");
+        ch=br.readLine();int count = 0, len = 0;
+        do{
+            try {
+                char name[] = ch.toCharArray();
+                len = name.length;
+                count = 0;
+                for (int j = 0; j < len; j++) {
+                    if ((name[0] == name[j]) && ((name[0] >= 65 && name[0] <= 91) || (name[0] >= 97 && name[0] <= 123)))
+                        count++;
+                }
+                if (count != 0)
+                    System.out.println(name[0] + " " + count + " Times");
+                ch = ch.replace("" + name[0], "");
+            } catch (Exception ex) {
+            }
+        }
+        while(len!=1);
+    }
+
+}
