@@ -6,7 +6,7 @@ public class SeventeenthTask {
 
         int y=0, x, tempNumber;
 
-        int qurentNumber=25; //Данное число мы будем проверять на то, является ли оно числом Армстронга
+        int qurentNumber=250; //Данное число мы будем проверять на то, является ли оно числом Армстронга
 
         tempNumber = qurentNumber;
 
